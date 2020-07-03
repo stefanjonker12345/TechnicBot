@@ -223,4 +223,4 @@ balance: newamount
 });
 });
 
-client.login(process.env.token);
+bot.login(process.env.token);
