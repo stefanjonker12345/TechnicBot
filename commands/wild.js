@@ -846,7 +846,7 @@ if (legend < 10) {
         let SpA = Math.floor(Math.random() * 32)
         let SpD = Math.floor(Math.random() * 32)
         let Speed = Math.floor(Math.random() * 32)
-		let Shiny = Math.floor(Math.random() * 1)
+		let Shiny = Math.floor(Math.random() * 2)
         var dexno = dexno2 + 1
 		var caughtmon3 = caughtmon2
 let derp
@@ -890,7 +890,7 @@ message.channel.send(embed)
     setTimeout(() => {
         // Removes the user from the set after a minute
         talkedRecently.delete(message.author.id);
-    }, 60000);
+    }, 6000);
     }
 }
 
