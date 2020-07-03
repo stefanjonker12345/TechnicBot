@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "@keyv/mysql": "^1.1.4",
+    "@keyv/postgres": "^1.0.16",
+    "ascii": "^1.0.0",
+    "ascii-art": "^1.5.1",
+    "db": "^1.1.1",
+    "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
+    "discord.js": "^11.6.1",
+    "discord.js-helper": "^3.0.5",
+    "dotenv": "^7.0.0",
+    "firebase": "^5.9.3",
+    "firebase-admin": "^7.2.0",
+    "firebase-app": "0.0.1",
+    "firestore": "^1.1.6",
+    "fs": "0.0.1-security",
+    "got": "^9.6.0",
+    "ms": "^2.1.1",
+    "node-gyp": "^3.8.0",
+    "opus": "0.0.0",
+    "opusscript": "0.0.6",
+    "random-puppy": "^1.1.0",
+    "snekfetch": "^4.0.4",
+    "uws": "^100.0.1",
+    "weather-js": "^2.0.0",
+    "websocket": "^1.0.28",
+    "winston": "^3.2.1",
+    "ytdl-core": "^0.29.1"
+  }
+}
