@@ -846,7 +846,7 @@ if (legend < 10) {
         let SpA = Math.floor(Math.random() * 32)
         let SpD = Math.floor(Math.random() * 32)
         let Speed = Math.floor(Math.random() * 32)
-		let Shiny = Math.floor(Math.random() * 1001)
+		let Shiny = Math.floor(Math.random() * 1)
         var dexno = dexno2 + 1
 		var caughtmon3 = caughtmon2
 let derp
