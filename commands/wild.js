@@ -857,7 +857,7 @@ caughtmon3 = "✨ " + caughtmon2 + " ✨"
  derp = ("http://play.pokemonshowdown.com/sprites/xyani/" + `${caughtmon2.toLowerCase()}` + ".gif")
 }
 const embed = new Discord.RichEmbed()
-.setTitle(`You caught a wild ${caughtmon3}! [ID: ${newcoll}]`)
+.setTitle(`${message.member.user.name} caught a wild ${caughtmon3}! [ID: ${newcoll}]`)
 .addField("Level:", `${level}`)
 .setImage(derp)
 .setFooter(`To view this pokémon's stats use ${prefix}stats ${newcoll}`)
