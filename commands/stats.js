@@ -54,7 +54,7 @@ if (Shiny == 1) {
 }
 const embed = new Discord.RichEmbed()
 .setTitle(`[No ${response}] ${name}`)
-.addField("Level:", `${level}           `)
+.addField("Level:", `${level}`)
 .addField("HP:", `${HP}`)
 .addField("Attack:", `${Attack}`)
 .addField("Defense:", `${Defense}`)
@@ -62,7 +62,7 @@ const embed = new Discord.RichEmbed()
 .addField("SpD:", `${SpD}`)
 .addField("Speed:", `${Speed}`)
 .setImage(derp)
-.setFooter(`Viewing pokémon ${response} out of ${oldcoll}`)
+.setFooter(`Viewing pokémon ${response} out of ${oldcoll}. To see the stats of your other pokemon use !stats (ID)`)
 message.channel.send(embed)
 }
 
