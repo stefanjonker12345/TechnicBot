@@ -55,7 +55,6 @@ if (Shiny == 1) {
 const embed = new Discord.RichEmbed()
 .setTitle(`[No ${response}] ${name}`)
 .addField("Level:", `${level}`)
-
 .setImage(derp)
 .setFooter(`Viewing pokémon ${response} out of ${oldcoll}.`)
 message.channel.send(embed)
