@@ -1,1 +1,1 @@
-woker: node ovapuhin.js
+woker: node index.js
