@@ -858,7 +858,7 @@ caughtmon3 = "✨ " + caughtmon2 + " ✨"
 }
 const embed = new Discord.RichEmbed()
 .setTitle(`${message.member.user.username}'s catch [ID: ${newcoll}]`)
-.addField(`${caughtmon3}!`. "⠀")
+.addField(`${caughtmon3}!`, "⠀")
 .addField("Level:", `${level}`)
 .setImage(derp)
 .setFooter(`To view this pokémon's stats use ${prefix}stats ${newcoll}`)
