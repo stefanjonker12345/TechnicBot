@@ -1,5 +1,8 @@
 module.exports.run = async (bot, message, args, db) => {
-if (message.member.hasPermission('MANAGE_ROLES')) else return message.reply("You can't manage roles!")
+if (!message.member.hasPermission('MANAGE_ROLES')){
+	return message.reply("Missing manage roles permission")
+}
+if (message.member.hasPermission('MANAGE_ROLES')) 
             message.delete();
         const sayMessage = args.slice(1).join(' ');
         if (!sayMessage) {
