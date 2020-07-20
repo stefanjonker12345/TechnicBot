@@ -49,19 +49,19 @@ bot.on("ready", () => {
     console.log(`Bot has started, with ${bot.users.size} users, in ${bot.channels.size} channels of ${bot.guilds.size} guilds.`);
     // Example of changing the bot's playing game to something useful. `client.user` is what the
     // docs refer to as the "ClientUser".
-    bot.user.setActivity(`Bots are epic!`);
+    bot.user.setActivity(`Welcome to Eevee's Emporium | !help`);
 });
 
 bot.on("guildCreate", guild => {
     // This event triggers when the bot joins a guild.
     console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
-    bot.user.setActivity(`Bots are epic!`);
+    bot.user.setActivity(`Welcome to Eevee's Emporium | !help`);
 });
 
 bot.on("guildDelete", guild => {
     // this event triggers when the bot is removed from a guild.
     console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
-    bot.user.setActivity(`Bots are epic!`);
+    bot.user.setActivity(`Welcome to Eevee's Emporium | !help`);
 });
 
 bot.on('guildCreate', async gData => {
