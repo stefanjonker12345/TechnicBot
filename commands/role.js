@@ -23,13 +23,14 @@ if (message.member.hasPermission('MANAGE_ROLES'))
         if (role.position === memberrole.position) {
             return await message.channel.send("Your role is equal to that role, you can't give that role.")
         }
-		if (!message.member.roles.some(role => role.name === role)){
-		pre = "added"
-        suff = "to"		
-		roled.addRole(role.id)} else {
-		pre = "removed"
-        suff = "from"		
-		roled.removeRole(role.id)}
+		if (!message.member.roles.some(role => role.name === sayMessage)){
+			pre = "added"
+			suff = "to"		
+			roled.addRole(role.id)
+		} else {
+			pre = "removed"
+			suff = "from"		
+			roled.removeRole(role.id)}
         message.channel.send(`Sucesfully ${pre} role ${sayMessage} ${suff} ${roled.user.tag}`)
     }
 
