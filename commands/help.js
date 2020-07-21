@@ -50,8 +50,8 @@ let input = args.join(" ");
 			const embed = new Discord.RichEmbed()
                 .setTitle("**Command List**")
                 .setDescription("**Here's a list of all my commands!**")
-                .addField("```🔨Moderation🔨```", "`kick` `ban` `mute` `unmute` `purge` `role` `nick`")
-				.addField("```✨Utility✨```", "`echo`")
+                .addField("```🔨Moderation🔨```", "`kick` `ban` `mute` `unmute` `purge` `role`")
+				.addField("```✨Utility✨```", "`echo` `nick`")
                 .setFooter("For information on specific commands use !help [command]");
             message.author.send(embed);
         }
