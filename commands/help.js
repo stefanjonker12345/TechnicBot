@@ -40,13 +40,14 @@ const commands = [
             value: "Let the bot send a message."
         }
     ];
+const Discord = require('discord.js')
 module.exports.run = async (bot, message, args, db) => {
 let input = args.join(" ");
         message.delete();
         if (!input) {
             //Please only mess with new lines
             const m = message.channel.send("I've sent you a list of my commands through DM!");
-            message.author.send({
+            message.member.send({
                 embed: {
                     color: 12745742,
                     author: {
@@ -86,7 +87,7 @@ let input = args.join(" ");
             message.channel.send(embed)
         }
         if (input === "kick") {
-            const embed = new Discord.RichEmbed()
+			const embed = new Discord.MessageEmbed()
                 .setTitle("`!kick`")
                 .setDescription("This contains info on how to properly use `!kick`")
                 .addField("Description", "Kicks a user from the server.")
