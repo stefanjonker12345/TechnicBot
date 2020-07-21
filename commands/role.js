@@ -28,7 +28,7 @@ if (message.member.hasPermission('MANAGE_ROLES'))
 			suff = "to"		
 			roled.addRole(role.id)
 		} 
-		if (message.member.roles.some(role => role.name === sayMessage)){
+		if (roled.roles.some(role => role.name === sayMessage)){
 			pre = "removed"
 			suff = "from"		
 			roled.removeRole(role.id)}
