@@ -12,7 +12,7 @@ if (message.member.hasPermission('MANAGE_ROLES'))
         }
         let role = message.guild.roles.find("name", `${sayMessage}`);
         let roled = message.mentions.members.first();
-        if (!roled) {
+		if (!roled) {
             roled = message.author
         }
         if (!role) return message.channel.send("Role not found");

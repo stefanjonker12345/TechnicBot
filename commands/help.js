@@ -47,23 +47,13 @@ let input = args.join(" ");
         if (!input) {
             //Please only mess with new lines
             const m = message.channel.send("I've sent you a list of my commands through DM!");
-            message.member.send({
-                embed: {
-                    color: 12745742,
-                    author: {
-                        name: client.user.username,
-                        icon_url: client.user.avatarURL
-                    },
-                    title: "Help",
-                    description: "***_So you want to know how to use my power? Here is a quick guide!_***",
-                    fields: commands,
-                    timestamp: new Date(),
-                    footer: {
-                        icon_url: client.user.avatarURL,
-                        text: "Paradise Bot V.1.2.0"
-                    }
-                }
-            });
+			const embed = new Discord.RichEmbed()
+                .setTitle("**Command List**")
+                .setDescription("**Here's a list of all my commands!**")
+                .addField("```🔨Moderation🔨```", "`kick` `ban` `mute` `unmute` `purge` `role` `nick`")
+				.addField("```✨Utility✨```", "`echo`")
+                .setFooter("For information on specific commands use !help [command]");
+            message.author.send(embed);
         }
 
         const validCommand = commands.find(function(item){
@@ -87,7 +77,7 @@ let input = args.join(" ");
             message.channel.send(embed)
         }
         if (input === "kick") {
-			const embed = new Discord.MessageEmbed()
+			const embed = new Discord.RichEmbed()
                 .setTitle("`!kick`")
                 .setDescription("This contains info on how to properly use `!kick`")
                 .addField("Description", "Kicks a user from the server.")
@@ -124,8 +114,8 @@ let input = args.join(" ");
                 .setTitle("`!mute`")
                 .setDescription("This contains info on how to properly use `!mute`")
                 .addField("Description", "Mutes a user.")
-                .addField("Usage", "```!mute [@user] [time in muinutes] (reason)```")
-                .addField("Example", "```!mute @Husky 10 spam```")
+                .addField("Usage", "```!mute [@user] [time(variable)] (reason)```")
+                .addField("Example", "```!mute @Husky 10m spam```")
                 .addField("Permissions needed", "`MANAGE_MESSAGES`")
                 .setFooter("Variables surrounded by [] are mandatory, () means optional");
             message.channel.send(embed)
