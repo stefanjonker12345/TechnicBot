@@ -188,5 +188,5 @@ let input = args.join(" ");
     }
 
 module.exports.help = {
-    name: "ping"
+    name: "help"
 }
