@@ -14,5 +14,5 @@ module.exports.run = async (bot, message, args, db) => {
     }
 
 module.exports.help = {
-    name: "echo"
+    name: "DM"
 }
