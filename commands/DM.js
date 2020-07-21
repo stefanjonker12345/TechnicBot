@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args, db) => {
 		if(!user){return message.reply("Please provide a user to DM")}
         // Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley
         // And we get the bot to say the thing:
-        channel.send(sayMessage);
+        user.send(sayMessage);
     }
 
 module.exports.help = {
