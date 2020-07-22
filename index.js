@@ -2,6 +2,7 @@
 const Discord = require("discord.js");
 const fs = require('fs');
 const active = new Map();
+const talkedRecently = new Set();
 // This is your client. Some people call it `bot`, some people call it `self`, 
 // some might call it `cootchie`. Either way, when you see `client.something`, or `bot.something`,
 // this is what we're refering to. Your client.
@@ -217,10 +218,21 @@ let coindata = await db.collection('coins').doc(message.member.id.toString());
 let oldcoins3 = await db.collection('coins').doc(message.member.id.toString()).get().then(function(doc) {
     return doc.data().balance
 })
+
+ talkedRecently.add(message.author.id);
+    setTimeout(() => {
+        // Removes the user from the set after a minute
+        talkedRecently.delete(message.author.id);
+    }, 30000);
+    }
 let newamount = oldcoins3 + 1
+if (talkedRecently.has(message.author.id)) {
+        log("User has talked recently")
+    } else {
 db.collection('coins').doc(message.member.id).update({
 balance: newamount
 });
+	}
 });
 
 bot.login(process.env.token);
