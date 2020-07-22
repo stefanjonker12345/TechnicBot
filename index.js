@@ -224,15 +224,14 @@ let oldcoins3 = await db.collection('coins').doc(message.member.id.toString()).g
         // Removes the user from the set after a minute
         talkedRecently.delete(message.author.id);
     }, 30000);
-    }
 let newamount = oldcoins3 + 1
 if (talkedRecently.has(message.author.id)) {
         log("User has talked recently")
     } else {
 db.collection('coins').doc(message.member.id).update({
 balance: newamount
-});
-	}
+})
+}
 });
 
 bot.login(process.env.token);
