@@ -58,8 +58,8 @@ const category = message.guild.channels.find(c => c.name == "Sales" && c.type ==
 if (!category) return message.reply("Category not found!")
 channel.setParent(category.id);
 
-message.reply(`Bought` + "`" + `#${ID}` + "`" + `${name} for ${amount}. You have been given a personal channel to redeem your purchase. Please be patient and wait for a Staff member to help you out!`)
-channel.send(`${staffrole} \n \n ${message.member} purchased **#${ID} ${name}** \n Pleae be patient for staff to help you out!`) 
+message.reply(`Bought` + "`" + `#${ID}` + "`" + ` ${name} for ${amount}. You have been given a personal channel to redeem your purchase. Please be patient and wait for a Staff member to help you out!`)
+channel.send(`${staffrole} \n ${message.member} purchased **#${ID} ${name}** \n` + "`" + `Pleae be patient for staff to help you out!` + "`") 
 }
 
 
