@@ -4,7 +4,13 @@ let oldcoins = await db.collection('coins').doc(message.member.id.toString()).ge
 })
 let oldcoinsnum = parseInt(oldcoins)
 let ID = args[0]
-message.channel.send(`${ID}`)
+
+var docRef = db.collection('sales').doc(ID);
+docRef.get().then(function(doc) {
+    if (!doc.exists) {
+        return message.reply("The ID you provided is either invalid or already sold!")
+    }
+	
 let name = await db.collection('sales').doc(ID).get().then(function(doc) {
     return doc.data().Name
 })
@@ -18,12 +24,15 @@ db.collection('coins').doc(message.member.id).update({
 balance: newamount
 });
 message.channel.send(`Bought` + "`" + `#${ID}` + "`" + `${name} for ${amount}`)
+docRef.get().then(function(doc) {
+    if (doc.exists) {
+        doc.delete()
+    }
+	
 
 let user = message.member.user.tag
 let userid = message.member.id
 let staffrole = message.guild.roles.find("name", "Eevee");
-let helpmessage = args.join(" ");
-if (!helpmessage) return message.reply ("Please provide a reason!")
 if (!staffrole) return message.reply("No staff role found!")
 let staffid = staffrole.id
 const channel = await message.guild.createChannel(`${user}`, {
@@ -48,7 +57,7 @@ if (!category) return message.reply("Category not found!")
 channel.setParent(category.id);
 
 message.reply("You have been given a personal channel! Please be patient and wait for a Staff member to help you out!")
-channel.send(`${staffrole} ${message.member} **Needs help** with **${helpmessage}**`) 
+channel.send(`${staffrole} ${message.member} bought **#${ID}${name}**`) 
 }
 
 
