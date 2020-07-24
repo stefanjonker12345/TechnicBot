@@ -10,7 +10,7 @@ docRef.get().then(function(doc) {
     if (!doc.exists) {
         return message.reply("The ID you provided is either invalid or already sold!")
     }
-}
+})
 	
 let name = await db.collection('sales').doc(ID).get().then(function(doc) {
     return doc.data().Name
