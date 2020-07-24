@@ -29,6 +29,7 @@ docRef.get().then(function(doc) {
     if (doc.exists) {
         doc.delete()
     }
+})
 	
 
 let user = message.member.user.tag
