@@ -25,11 +25,12 @@ db.collection('coins').doc(message.member.id).update({
 balance: newamount
 });
 message.channel.send(`Bought` + "`" + `#${ID}` + "`" + `${name} for ${amount}`)
-docRef.get().then(function(doc) {
-    if (doc.exists) {
-        doc.delete()
-    }
-})
+db.collection("sales").doc(ID).delete().then(function() {
+    console.log("Document successfully deleted!");
+}).catch(function(error) {
+    console.error("Error removing document: ", error);
+});
+
 	
 
 let user = message.member.user.tag
@@ -58,8 +59,8 @@ const category = message.guild.channels.find(c => c.name == "Sales" && c.type ==
 if (!category) return message.reply("Category not found!")
 channel.setParent(category.id);
 
-message.reply("You have been given a personal channel! Please be patient and wait for a Staff member to help you out!")
-channel.send(`${staffrole} ${message.member} bought **#${ID}${name}**`) 
+message.reply(`Bought` + "`" + `#${ID}` + "`" + `${name} for ${amount}. You have been given a personal channel to redeem your purchase. Please be patient and wait for a Staff member to help you out!`)
+channel.send(`${staffrole} ${message.member} purchased **#${ID} ${name}** \n Pleae be patient for staff to help you out!`) 
 }
 
 
