@@ -5,6 +5,7 @@ let oldcoins = await db.collection('coins').doc(message.member.id.toString()).ge
 let oldcoinsnum = parseInt(oldcoins)
 let ID = args[1]
 let name = "nill"
+message.channel.send(`${ID}`)
 let q = await db.collection('sales').doc(ID).get();
         if (doc) {
         name = q.data().Name
