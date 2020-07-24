@@ -5,7 +5,7 @@ let referred = await db.collection('playerbase').doc(message.member.id.toString(
 if (referred === "yes") return message.reply("You have already provided the user who referred you!")
 let referstatus = await db.collection('playerbase').doc(message.member.id.toString()).update({
 referred: "yes"
-)}
+})
 let oldcoins = await db.collection('coins').doc(message.mentions.members.first().id.toString()).get().then(function(doc) {
     return doc.data().balance
 })
