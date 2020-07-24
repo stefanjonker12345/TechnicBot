@@ -3,7 +3,7 @@ let oldcoins = await db.collection('coins').doc(message.member.id.toString()).ge
     return doc.data().balance
 })
 let oldcoinsnum = parseInt(oldcoins)
-let ID = args[0]
+let ID = args[1]
 let name = "nill"
 let q = await db.collection('sales').doc(ID).get();
         if (doc) {
