@@ -3,15 +3,12 @@ let oldcoins = await db.collection('coins').doc(message.member.id.toString()).ge
     return doc.data().balance
 })
 let oldcoinsnum = parseInt(oldcoins)
-let ID = args[1]
+let ID = args[0]
 let name = "nill"
 message.channel.send(`${ID}`)
-let q = await db.collection('sales').doc(ID).get();
-        if (doc) {
-        name = q.data().Name
-} else {
-		return message.reply ("ID not found or already sold")
-}
+let name = await db.collection('sales').doc(ID).get().then(function(doc) {
+    return doc.data().Name
+})
 let amount = await db.collection('sales').doc(ID).get().then(function(doc) {
     return doc.data().Price
 })
