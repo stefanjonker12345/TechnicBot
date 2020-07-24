@@ -5,9 +5,9 @@ let oldcoins = await db.collection('coins').doc(message.member.id.toString()).ge
 let oldcoinsnum = parseInt(oldcoins)
 let ID = args[0]
 let name = "nill"
-let q = await db.collection('sales').doc(I).get(ID);
-        if (q._fieldsProto[ID]) {
-        name = q.data().name
+let q = await db.collection('sales').doc(ID).get();
+        if (doc) {
+        name = q.data().Name
 } else {
 		return message.reply ("ID not found or already sold")
 }
