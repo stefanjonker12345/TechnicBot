@@ -133,13 +133,14 @@ bot.on("message", async message => {
             console.log('Error getting document', err);
         });
 		
-let hungergamesData = await db.collection('playerbase').doc('players');
+let hungergamesData = await db.collection('playerbase').doc(message.member.id.toString());
     await hungergamesData.get().then(doc => {
             console.log(doc)
             if (doc.exists) {
                 return true;
             } else {
-                db.collection('playerbase').doc('players').set({
+                db.collection('playerbase').doc(message.member.id.toString()).set({
+					"Referred": 'no'
                 }).then(() => {
                     console.log('Added database for players');
                 });

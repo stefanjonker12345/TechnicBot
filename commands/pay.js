@@ -1,4 +1,5 @@
 module.exports.run = async (bot, message, args,db) => {
+message.delete()
 let verify = message.author.id;
 let verify2 = message.mentions.members.first().user.id;
 if (verify == verify2 ) return message.reply("can't pay yourself");
@@ -23,7 +24,7 @@ db.collection('coins').doc(giveperson.id).update({
 balance: newamount2
 });
 let luckyone = message.mentions.members.first()
-message.channel.send(`Paid ${luckyone} ${amount} coins. Your new balance is ${newamount}`)
+message.channel.send(`${message.author}, paid ${luckyone} ${amount} coins. Your new balance is ${newamount}`)
 }
 
 module.exports.help = {
