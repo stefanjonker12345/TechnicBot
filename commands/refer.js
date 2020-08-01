@@ -10,7 +10,7 @@ let oldcoins = await db.collection('coins').doc(message.mentions.members.first()
     return doc.data().balance
 })
 let oldcoinsnum = parseInt(oldcoins)
-let arguments = 150
+let arguments = 300
 let amount = parseInt(arguments)
 let newamount = oldcoinsnum + amount
 let giveperson = message.mentions.members.first()
