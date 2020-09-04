@@ -3,6 +3,7 @@ module.exports.run = async (bot, message, args, db) => {
             return message.reply("Sorry, you don't have permissions to use this!");
 
         let member = message.mentions.members.first();
+        if (member.id == "611913127780679711") return message.reply("please do not the Husk.")
         if (!member)
             return message.reply("Please mention a valid member of this server");
         if (!member.bannable)
