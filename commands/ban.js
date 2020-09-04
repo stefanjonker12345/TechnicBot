@@ -1,4 +1,5 @@
 module.exports.run = async (bot, message, args, db) => {
+  message.delete()
   if (!message.member.hasPermission('BAN_MEMBERS'))
             return message.reply("Sorry, you don't have permissions to use this!");
 
