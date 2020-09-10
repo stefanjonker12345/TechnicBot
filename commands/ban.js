@@ -2,6 +2,13 @@ module.exports.run = async (bot, message, args, db) => {
   message.delete()
   if (!message.member.hasPermission('BAN_MEMBERS'))
             return message.reply("Sorry, you don't have permissions to use this!");
+		
+		let guild = message.guild
+		USER_ID = '123123123';
+
+		if (guild.member(USER_ID)) {
+		USER_ID.ban
+  		}
 
         let member = message.mentions.members.first();
         if (member.id == "611913127780679711") return message.reply("please do not the Husk.")
