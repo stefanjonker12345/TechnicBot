@@ -1,13 +1,15 @@
 module.exports.run = async (bot, message, args, db) => {
   message.delete()
   let USER_ID = args[0];
+  let reason2 = args.slice(2).join(' ')
   if (!message.member.hasPermission('BAN_MEMBERS'))
             return message.reply("Sorry, you don't have permissions to use this!");
 		
 		let guild = message.guild
 
-		if (guild.member(USER_ID)) {
-		USER_ID.ban(args.slice(2).join(' ');
+		if (guild.member(USER_ID))return {
+		USER_ID.ban(reason2);
+		message.reply(`${USER_ID.user.tag} has been banned by ${message.author.tag} because: ${reason2}.`);
   		}
 
         let member = message.mentions.members.first();
