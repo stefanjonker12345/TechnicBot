@@ -23,7 +23,7 @@ module.exports.run = async (bot, message, args, db) => {
 
         await member.ban(reason)
             .catch(error => message.reply(`Sorry ${message.author} I couldn't ban because of : ${error}.`));
-        message.reply(`${member.user.tag} has been banned by ${message.author.tag} because: ${reason}.`);
+        message.channel.send(`${member.user.tag} has been banned by ${message.author.tag} because: ${reason}.`);
     }
 
 module.exports.help = {

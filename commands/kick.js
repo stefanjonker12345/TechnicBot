@@ -1,4 +1,5 @@
 module.exports.run = async (bot, message, args, db) => {
+message.delete()
  if (!message.member.hasPermission('KICK_MEMBERS'))
             return message.reply("Sorry, you don't have permissions to use this!");
 
@@ -24,6 +25,9 @@ module.exports.run = async (bot, message, args, db) => {
         if (role.position === memberrole.position) {
             return await message.channel.send("Can't kick them, they are as powerful as you are!")
 		}
+		await member.kick(reason)
+            .catch(error => message.reply(`Sorry ${message.author} I couldn't ban because of : ${error}.`));
+        message.channel.send(`${member.user.tag} has been banned by ${message.author.tag} because: ${reason}.`);
 }
 
 module.exports.help = {
