@@ -7,7 +7,6 @@ if(!warnmember) return message.reply("Please provide a user to warn!")
 let warns = await db.collection('members').doc(warnmember.id.toString()).get().then(function(doc) {
     return doc.data().warns
 })
-message.channel.send(`${warns}`)
 let newwarns = warns + 1
 db.collection('members').doc(warnmember.id.toString()).update({	
 [newwarns]: reason
