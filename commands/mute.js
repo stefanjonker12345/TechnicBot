@@ -53,7 +53,9 @@ if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("No c
             .addField("Reason", reason);
 
         let channel = message.guild.channels.find(c => c.name === "⌜logs⌟");
+		if(channel) {
         channel.send(embed);
+		}
 
         await (tomute.addRole(muterole.id));
 
