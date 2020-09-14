@@ -8,7 +8,7 @@ let warns = await db.collection('members').doc(warnmember.id.toString()).get().t
 message.channel.send(`${warns}`)
 let newwarns = warns + 1
 db.collection('coins').doc(giveperson.id).update({
-newwarns: reason
+[newwarns]: reason
 });
 }
 
