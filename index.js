@@ -152,12 +152,12 @@ let hungergamesData = await db.collection('playerbase').doc(message.member.id.to
 		
 	    let playerData = await db.collection('members').doc(message.member.id.toString());
     await playerData.get().then(doc => {
-            console.log("TEST")
             console.log(doc)
             if (doc.exists) {
                 return true;
             } else {
                 db.collection('members').doc(message.member.id.toString()).set({
+					warns: 0
                 }).then(() => {
                     console.log('Added user ' + message.member.id.toString());
                 });
