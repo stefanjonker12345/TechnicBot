@@ -12,7 +12,7 @@ db.collection('members').doc(warnmember.id.toString()).update({
 [newwarns]: reason
 });
 db.collection('members').doc(warnmember.id.toString()).update({	
-warns: newwarns
+"warns": newwarns
 });
 }
 
