@@ -6,7 +6,7 @@ if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("No c
         if (!tomute) return message.reply("Couldn't find user.");
         if (tomute.hasPermission("MANAGE_MESSAGES")) return message.reply("Can't mute them!");
         let reason = args.slice(2).join(" ");
-        if (!reason) return message.reply("Usage is !mute (user) (time in minutes) (reason)");
+        if (!reason) return message.reply("Please provide a reason, for correct usage use `!help mute`");
 
         let muterole = message.guild.roles.find(`name`, "muted");
         //start of create role
