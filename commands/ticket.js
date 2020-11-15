@@ -2,7 +2,7 @@ module.exports.run = async (bot, message, args, db) => {
 message.delete()
 let user = message.member.user.tag
 let userid = message.member.id
-let staffrole = message.guild.roles.find("name", "Eevee");
+let staffrole = message.guild.roles.find("name", "Staff");
 let helpmessage = args.join(" ");
 if (!helpmessage) return message.reply ("Please provide a reason!")
 if (!staffrole) return message.reply("No staff role found!")
