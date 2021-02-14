@@ -4,6 +4,7 @@ message.delete()
 	let openedchannel = message.channel
 	bot.channels.get("810541518141653022").send(`${openedchannel} is now open!`);
 	openedchannel.overwritePermissions('807918569090187286', { SEND_MESSAGES: true});
+	message.channel.send("This gym is now opened! Ping the gym leader to challenge this gym!")
 }
 
 module.exports.help = {
