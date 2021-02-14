@@ -5,7 +5,7 @@ message.delete()
 	bot.channels.get("810541518141653022").send(`${openedchannel} is now open!`);
 	openedchannel.overwritePermissions([
   {
-    id: 807918569090187286
+    id: "807918569090187286",
     allow: ["VIEW_MESSAGES", "SEND_MESSAGES"]
   }
 ]);
