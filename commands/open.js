@@ -3,7 +3,7 @@ message.delete()
 	if (!roled.roles.some(role => role.name === "Gym Leader")) return message.reply("I'm afraid you can't use this!")
 	message.guild.channels
 	let openedchannel = message.channel
-	bot.channels.get('810541518141653022').send(`${openedchannel} **just opened**`);
+	bot.channels.get(810541518141653022).send(`${openedchannel} **just opened**`);
 }
 
 module.exports.help = {
