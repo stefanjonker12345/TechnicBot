@@ -51,7 +51,7 @@ bot.on("ready", () => {
     // Example of changing the bot's playing game to something useful. `client.user` is what the
     // docs refer to as the "ClientUser".
     bot.user.setStatus('dnd')
-    bot.user.setActivity(`Welcome to Eevee's Café! | !help`);
+    bot.user.setActivity(`!help`);
 });
 
 
