@@ -42,6 +42,7 @@ const commands = [
     ];
 const Discord = require('discord.js')
 module.exports.run = async (bot, message, args, db) => {
+console.log("bot is working")
 let input = args.join(" ");
         message.delete();
         if (!input) {
