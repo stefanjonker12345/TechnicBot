@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "discord-buttons": "^2.4.1",
-    "discord.js": "^11.6.4",
+    "discord.js": "^12.5.3",
     "firebase": "^7.15.5",
     "firebase-admin": "^8.13.0",
     "ms": "^2.1.2"
