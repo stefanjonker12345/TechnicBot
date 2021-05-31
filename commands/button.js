@@ -1,6 +1,5 @@
-const { MessageButton } = require('discord-buttons');
-
 module.exports.run = async (bot, message, args, db, disbut) => {
+const { MessageButton } = require('discord-buttons');
 message.delete()
 let button = new disbut.MessageButton()
   .setStyle('red') //default: blurple
