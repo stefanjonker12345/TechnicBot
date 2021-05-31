@@ -1,29 +1,38 @@
 module.exports.run = async (bot, message, args, db) => {
   message.delete()
-  if (!message.member.hasPermission('BAN_MEMBERS'))
-            return message.reply("Sorry, you don't have permissions to use this!");
-        let member = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0])
-        if (member.id == "611913127780679711") return message.reply("please do not the Husk.")
-        if (!member)
-            return message.reply("Please mention a valid member of this server");
-        if (!member.bannable)
-            return message.reply("I cannot ban this user! Do they have a higher role? Do I have ban permissions?");
+  if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send('You can\'t use that!')
+        if(!message.guild.me.hasPermission("BAN_MEMBERS")) return message.channel.send('I don\'t have the right permissions.')
 
-        let role = message.member.highestRole;
-        let memberrole = member.highestRole;
-        if (role.position < memberrole.position) {
-            return await message.channel.send("Can't ban them, they are more powerful than you are!")
-        }
-        if (role.position === memberrole.position) {
-            return await message.channel.send("Can't ban them, they are as powerful as you are!")
-        }
+        const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
 
-        let reason = args.slice(1).join(' ');
-        if (!reason) reason = "No reason provided";
+        if(!args[0]) return message.channel.send('Please specify a user');
 
-        await member.ban(reason)
-            .catch(error => message.reply(`Sorry ${message.author} I couldn't ban because of : ${error}.`));
-        message.channel.send(`${member.user.tag} has been banned by ${message.author.tag} because: ${reason}.`);
+        if(!member) return message.channel.send('Can\'t seem to find this user. Sorry \'bout that :/');
+        if(!member.bannable) return message.channel.send('This user can\'t be banned. It is either because they are a mod/admin, or their highest role is higher than mine');
+
+        if(member.id === message.author.id) return message.channel.send('Bruh, you can\'t ban yourself!');
+
+        let reason = args.slice(1).join(" ");
+
+        if(!reason) reason = 'Unspecified';
+
+        member.ban(`${reason}`).catch(err => { 
+          message.channel.send('Something went wrong')
+            console.log(err)
+        })
+
+        const banembed = new Discord.MessageEmbed()
+        .setTitle('Member Banned')
+        .setThumbnail(member.user.displayAvatarURL())
+        .addField('User Banned', member)
+        .addField('Kicked by', message.author)
+        .addField('Reason', reason)
+        .setFooter('Time kicked', client.user.displayAvatarURL())
+        .setTimestamp()
+
+        message.channel.send(banembed);
+
+
     }
 
 module.exports.help = {
