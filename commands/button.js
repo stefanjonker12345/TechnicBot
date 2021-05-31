@@ -1,4 +1,4 @@
-module.exports.run = async (bot, message, args, db) => {
+module.exports.run = async (bot, message, args, db, disbut) => {
 message.delete()
 let button = new disbut.MessageButton()
   .setStyle('red') //default: blurple
