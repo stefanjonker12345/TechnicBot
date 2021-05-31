@@ -1,4 +1,4 @@
-module.exports.run = async (bot, message, args, db, disbut) => {
+module.exports.run = async (bot, message, args, db) => {
 message.delete()
 let button = new disbut.MessageButton()
   .setStyle('red') //default: blurple
@@ -10,5 +10,5 @@ message.channel.send('Hey, i am powered by https://npmjs.com/discord-buttons', b
 }
 
 module.exports.help = {
-    name: "button"
+    name: "button2"
 }
