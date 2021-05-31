@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args, db) => {
         let reason = args.slice(1).join(' ');
         if (!reason) reason = "No reason provided";
 
-        await guild.member.ban(reason)
+        await member.ban(reason)
             .catch(error => message.reply(`Sorry ${message.author} I couldn't ban because of : ${error}.`));
         message.channel.send(`${member.user.tag} has been banned by ${message.author.tag} because: ${reason}.`);
     }
