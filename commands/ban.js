@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args, db) => {
 
         if(!reason) reason = 'Unspecified';
 
-        member.ban(`${reason}`).catch(err => { 
+        message.guild.member.ban(`${reason}`).catch(err => { 
           message.channel.send('Something went wrong')
             console.log(err)
         })
@@ -31,8 +31,6 @@ module.exports.run = async (bot, message, args, db) => {
         .setTimestamp()
 
         message.channel.send(banembed);
-
-
     }
 
 module.exports.help = {
