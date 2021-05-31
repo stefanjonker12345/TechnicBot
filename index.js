@@ -9,6 +9,8 @@ const talkedRecently = new Set();
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 
+const disbut = require('discord-buttons')(bot);
+
 // Here we load the config.json file that contains our token and our prefix values. 
 const config = require("./config.json");
 // config.token contains the bot's token
