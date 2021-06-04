@@ -8,13 +8,7 @@ let filter = m => m.author.id === message.author.id
         })
         .then(message => {
           message = message.first()
-          if (message.content.toUpperCase() == 'YES' || message.content.toUpperCase() == 'Y') {
-            message.channel.send(`Deleted`)
-          } else if (message.content.toUpperCase() == 'NO' || message.content.toUpperCase() == 'N') {
-            message.channel.send(`Terminated`)
-          } else {
-            message.channel.send(`Terminated: Invalid Response`)
-          }
+          message.channel.send(`{message.content}`)
         })
         .catch(collected => {
             message.channel.send('Timeout');
