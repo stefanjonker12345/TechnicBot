@@ -6,6 +6,7 @@ let button = new disbut.MessageButton()
   .setID('click_to_function') 
   .setDisabled();
 
+message.channel.send("lol")
 message.channel.send('Hey, i am powered by https://npmjs.com/discord-buttons');
 }
 
