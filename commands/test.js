@@ -15,7 +15,7 @@ let content = "nill"
             message.author.send('Timeout');
         });
     })
-		message.channel.send("${content}")
+		await message.channel.send("${content}")
 }
 
 module.exports.help = {
