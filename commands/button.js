@@ -1,7 +1,7 @@
 const MessageButton  = require('discord-buttons');
 
 module.exports.run = async (bot, message, args, db, disbut) => {
-message.channel.send("Lol je stinkt lmao funny")
+message.channel.send("Lol je stinkt lmao funny!")
 let button = new disbut.MessageButton()
   .setStyle('red')
   .setLabel('My First Button!') 
