@@ -33,7 +33,6 @@ let db = admin.firestore();
 
 bot.on('clickButton', async (button) => {
   if (button.id === 'amogus') {
-		await button.reply.send("Hi");
     button.channel.send(`<:red:850334093777698817>`);
  }
 });
