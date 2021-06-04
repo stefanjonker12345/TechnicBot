@@ -3,11 +3,7 @@ module.exports.run = async (bot, message, args, db) => {
         const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
         console.log(collector)
         collector.on('collect', message => {
-            if (message.content == "See") {
-                message.channel.send("You Want To See Someones Spec OK!");
-            } else if (message.content == "Change") {
-                message.channel.send("You Want To Change Your Spec OK!");
-            }
+            message.channel.send(`${message.content}`)
         })
 }
 
