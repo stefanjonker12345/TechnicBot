@@ -1,13 +1,12 @@
 module.exports.run = async (bot, message, args, db, disbut, MessageButton) => {
-message.channel.send("Lol je stinkt lmao funny!")
-let button = new disbut.MessageButton()
-  .setStyle('red')
-  .setLabel('My First Button!') 
-  .setID('click_to_function') 
-  .setDisabled();
-
-message.channel.send("lol")
-message.channel.send('Hey, i am powered by https://npmjs.com/discord-buttons');
+message.channel.send("werkt")
+ let btn = new bot.disbut.MessageButton()
+    .setStyle('red')
+    .setLabel('AMONGUS !!! SO SUS !!!!')
+    .setID('amogus');
+  let msg = await message.channel.send('Click for AMOGUS 😳', {
+    button: btn
+  });
 }
 
 module.exports.help = {

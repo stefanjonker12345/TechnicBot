@@ -10,7 +10,7 @@ const MessageButton  = require('discord-buttons');
 const bot = new Discord.Client();
 bot.commands = new Discord.Collection();
 
-const disbut = require('discord-buttons')(bot);
+bot.disbut = require('discord-buttons')(bot);
 
 // Here we load the config.json file that contains our token and our prefix values. 
 const config = require("./config.json");
