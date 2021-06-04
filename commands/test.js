@@ -10,7 +10,7 @@ let content = "nill"
         .then(message => {
           message = message.first()
           content = message.content
-		  message.channel.send("${content}")
+		  await message.channel.send("${content}")
         })
         .catch(collected => {
             message.author.send('Timeout');
