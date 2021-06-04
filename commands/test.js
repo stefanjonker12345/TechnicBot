@@ -9,7 +9,7 @@ let unga = message.channel()
         })
         .then(message => {
           message = message.first()
-          unga.send(`${message.content}`)
+          message.channel.send(`${message.content}`)
         })
         .catch(collected => {
             message.channel.send('Timeout');
