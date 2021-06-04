@@ -29,6 +29,16 @@ admin.initializeApp({
 })
 let db = admin.firestore();
 
+// EVENT HANDLERS
+
+bot.on('clickButton', async (button) => {
+  if (button.id === 'amogus') {
+		await button.defer();
+    button.channel.send(`<:AMOGUS:848317305090867261>`);
+ }
+});
+
+
 // COMMAND HANDLER 1
 fs.readdir("./commands/", (err, files) => {
 
