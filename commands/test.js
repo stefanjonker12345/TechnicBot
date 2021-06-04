@@ -1,6 +1,5 @@
 module.exports.run = async (bot, message, args, db) => {
 let filter = m => m.author.id === message.author.id
-let unga = message.channel()
     message.author.send(`Please provide input`).then(() => {
       message.author.awaitMessages(filter, {
           max: 1,
