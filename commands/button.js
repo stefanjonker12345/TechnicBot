@@ -1,5 +1,4 @@
 module.exports.run = async (bot, message, args, db, disbut, MessageButton) => {
-message.channel.send("werkt")
  let btn = new bot.disbut.MessageButton()
     .setStyle('red')
     .setLabel('AMONGUS !!! SO SUS !!!!')
