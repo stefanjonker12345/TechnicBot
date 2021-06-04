@@ -4,6 +4,7 @@ message.channel.send("werkt")
     .setStyle('red')
     .setLabel('AMONGUS !!! SO SUS !!!!')
     .setID('amogus');
+	.setDisabled()
   let msg = await message.channel.send('Click for AMOGUS 😳', {
     button: btn
   });
