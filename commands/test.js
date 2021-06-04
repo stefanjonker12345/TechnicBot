@@ -1,5 +1,6 @@
 module.exports.run = async (bot, message, args, db) => {
 let filter = m => m.author.id === message.author.id
+let unga = message.channel()
     message.author.send(`Please provide input`).then(() => {
       message.author.awaitMessages(filter, {
           max: 1,
@@ -8,7 +9,7 @@ let filter = m => m.author.id === message.author.id
         })
         .then(message => {
           message = message.first()
-          message.channel.send(`${message.content}`)
+          unga.send(`${message.content}`)
         })
         .catch(collected => {
             message.channel.send('Timeout');
