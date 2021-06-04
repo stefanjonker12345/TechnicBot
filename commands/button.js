@@ -1,6 +1,6 @@
 module.exports.run = async (bot, message, args, db, disbut, MessageButton) => {
 message.channel.send("Lol je stinkt lmao funny!")
-let button = await new disbut.MessageButton()
+let button = new disbut.MessageButton()
   .setStyle('red')
   .setLabel('My First Button!') 
   .setID('click_to_function') 
