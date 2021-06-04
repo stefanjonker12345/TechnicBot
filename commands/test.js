@@ -14,8 +14,8 @@ let content = "nill"
         .catch(collected => {
             message.author.send('Timeout');
         });
-		message.channel.send("${content}")
     })
+		message.channel.send("${content}")
 }
 
 module.exports.help = {
