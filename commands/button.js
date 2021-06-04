@@ -1,6 +1,4 @@
-const MessageButton  = require('discord-buttons');
-
-module.exports.run = async (bot, message, args, db, disbut, discord-buttons) => {
+module.exports.run = async (bot, message, args, db, disbut, MessageButton) => {
 message.channel.send("Lol je stinkt lmao funny!")
 let button = await new disbut.MessageButton()
   .setStyle('red')
