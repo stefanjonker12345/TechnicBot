@@ -1,6 +1,6 @@
 module.exports.run = async (bot, message, args, db) => {
 let filter = m => m.author.id === message.author.id
-    message.channel.send(`Are you sure to delete all data? \`YES\` / \`NO\``).then(() => {
+    message.channel.send(`Please provide input`).then(() => {
       message.channel.awaitMessages(filter, {
           max: 1,
           time: 30000,
