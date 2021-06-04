@@ -6,7 +6,7 @@ const talkedRecently = new Set();
 // This is your client. Some people call it `bot`, some people call it `self`, 
 // some might call it `cootchie`. Either way, when you see `client.something`, or `bot.something`,
 // this is what we're refering to. Your client.
-const bot = new Discord.Client({disableEveryone: true});
+const bot = new Discord.Client();
 bot.commands = new Discord.Collection();
 
 const disbut = require('discord-buttons')(bot);
