@@ -10,12 +10,12 @@ let content = "nill"
         .then(message => {
           message = message.first()
           content = message.content
+		  message.channel.send("${content}")
         })
         .catch(collected => {
             message.author.send('Timeout');
         });
     })
-		await message.channel.send("${content}")
 }
 
 module.exports.help = {
