@@ -8,7 +8,7 @@ let filter = m => m.author.id === message.author.id
         })
         .then(message => {
           message = message.first()
-          message.channel.send(`{message.content}`)
+          message.channel.send(`${message.content}`)
         })
         .catch(collected => {
             message.channel.send('Timeout');
