@@ -48,7 +48,7 @@ let input = args.join(" ");
         if (!input) {
             //Please only mess with new lines
             const m = message.channel.send("I've sent you a list of my commands through DM!");
-			const embed = new Discord.RichEmbed()
+			const embed = new Discord.MessageEmbed()
                 .setTitle("**Command List**")
                 .setDescription("**Here's a list of all my commands!**")
                 .addField("```🔨Moderation🔨```", "`kick` `ban` `mute` `unmute` `purge` `role`")
@@ -67,7 +67,7 @@ let input = args.join(" ");
         }
 
         if (input === "help") {
-            const embed = new Discord.RichEmbed()
+            const embed = new Discord.MessageEmbed()
                 .setTitle("`!help`")
                 .setDescription("This contains info on how to properly use `!help`")
                 .addField("Description", "Shows this command!")
@@ -78,7 +78,7 @@ let input = args.join(" ");
             message.channel.send(embed)
         }
         if (input === "kick") {
-			const embed = new Discord.RichEmbed()
+			const embed = new Discord.MessageEmbed()
                 .setTitle("`!kick`")
                 .setDescription("This contains info on how to properly use `!kick`")
                 .addField("Description", "Kicks a user from the server.")
@@ -89,7 +89,7 @@ let input = args.join(" ");
             message.channel.send(embed)
         }
         if (input === "ban") {
-            const embed = new Discord.RichEmbed()
+            const embed = new Discord.MessageEmbed()
                 .setTitle("`!ban`")
                 .setDescription("This contains info on how to properly use `!ban`")
                 .addField("Description", "Bans a user from the server.")
@@ -100,7 +100,7 @@ let input = args.join(" ");
             message.channel.send(embed)
         }
         if (input === "purge") {
-            const embed = new Discord.RichEmbed()
+            const embed = new Discord.MessageEmbed()
                 .setTitle("`!purge`")
                 .setDescription("This contains info on how to properly use `!purge`")
                 .addField("Description", "Deletes an amount of messages.")
@@ -111,7 +111,7 @@ let input = args.join(" ");
             message.channel.send(embed)
         }
         if (input === "mute") {
-            const embed = new Discord.RichEmbed()
+            const embed = new Discord.MessageEmbed()
                 .setTitle("`!mute`")
                 .setDescription("This contains info on how to properly use `!mute`")
                 .addField("Description", "Mutes a user.")
@@ -122,7 +122,7 @@ let input = args.join(" ");
             message.channel.send(embed)
         }
         if (input === "ummute") {
-            const embed = new Discord.RichEmbed()
+            const embed = new Discord.MessageEmbed()
                 .setTitle("`!mute`")
                 .setDescription("This contains info on how to properly use `!ummute`")
                 .addField("Description", "Unmutes a user.")
@@ -133,7 +133,7 @@ let input = args.join(" ");
             message.channel.send(embed)
         }
         if (input === "role") {
-            const embed = new Discord.RichEmbed()
+            const embed = new Discord.MessageEmbed()
                 .setTitle("`!role`")
                 .setDescription("This contains info on how to properly use `!role`")
                 .addField("Description", "Add or remove user roles")
@@ -144,7 +144,7 @@ let input = args.join(" ");
             message.channel.send(embed)
         }
         if (input === "warn") {
-            const embed = new Discord.RichEmbed()
+            const embed = new Discord.MessageEmbed()
                 .setTitle("`!warn`")
                 .setDescription("This contains info on how to properly use `!warn`")
                 .addField("Description", "Gives a warning to a user.")
@@ -155,7 +155,7 @@ let input = args.join(" ");
             message.channel.send(embed)
         }
         if (input === "echo") {
-            const embed = new Discord.RichEmbed()
+            const embed = new Discord.MessageEmbed()
                 .setTitle("`!echo`")
                 .setDescription("This contains info on how to properly use `!echo`")
                 .addField("Description", "Lets the bot send a specific message in a channel")
@@ -166,7 +166,7 @@ let input = args.join(" ");
             message.channel.send(embed)
         }
 		if (input === "nick") {
-            const embed = new Discord.RichEmbed()
+            const embed = new Discord.MessageEmbed()
                 .setTitle("`!nick`")
                 .setDescription("This contains info on how to properly use `!nick`")
                 .addField("Description", "Changes a user's nickname")

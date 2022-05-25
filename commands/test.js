@@ -13,7 +13,7 @@ let content = "nill"
 		  console.log(content)
         })
         .catch(collected => {
-            message.author.send('Timeout');
+            message.author.send('Timeout L');
         });
     })
 }

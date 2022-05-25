@@ -72,7 +72,7 @@ bot.on('guildCreate', async gData => {
     db.collection('guilds').doc(gData.id).set({
         'guildID': gData.id,
         'guildName': gData.name,
-        'guildOwner': gData.owner.user.username,
+        'guildOwner': gData.owner.username,
         'guildOwnerID': gData.owner.id,
         'guildMemberCount': gData.memberCount,
         'prefix': '!'
