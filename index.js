@@ -121,7 +121,6 @@ bot.on("message", async message => {
     let listData = await db.collection('list').doc(message.member.id.toString());
     await listData.get().then(doc => {
             console.log("TEST")
-            console.log(doc)
             if (doc.exists) {
                 return true;
             } else {
@@ -138,7 +137,6 @@ bot.on("message", async message => {
 		
 let hungergamesData = await db.collection('playerbase').doc(message.member.id.toString());
     await hungergamesData.get().then(doc => {
-            console.log(doc)
             if (doc.exists) {
                 return true;
             } else {
@@ -155,7 +153,6 @@ let hungergamesData = await db.collection('playerbase').doc(message.member.id.to
 		
 	    let playerData = await db.collection('members').doc(message.member.id.toString());
     await playerData.get().then(doc => {
-            console.log(doc)
             if (doc.exists) {
                 return true;
             } else {
@@ -172,7 +169,6 @@ let hungergamesData = await db.collection('playerbase').doc(message.member.id.to
     let pokeData = await db.collection('pokemon').doc(message.member.id.toString());
     await pokeData.get().then(doc => {
             console.log("TEST")
-            console.log(doc)
             if (doc.exists) {
                 return true;
             } else {
@@ -189,7 +185,6 @@ let hungergamesData = await db.collection('playerbase').doc(message.member.id.to
 let nameData = await db.collection('names').doc(message.member.id.toString());
     await nameData.get().then(doc => {
             console.log("TEST")
-            console.log(doc)
             if (doc.exists) {
                 return true;
             } else {
@@ -205,7 +200,6 @@ let nameData = await db.collection('names').doc(message.member.id.toString());
 let coindata = await db.collection('coins').doc(message.member.id.toString());
     await coindata.get().then(doc => {
             console.log("Coins db created successfully :D")
-            console.log(doc)
             if (doc.exists) {
                 return true;
             } else {
