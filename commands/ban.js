@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args, db) => {
 
         if(!reason) reason = 'Unspecified';
 
-        message.guild.member.ban(`${reason}`).catch(err => { 
+        member.ban(`${reason}`).catch(err => { 
           message.channel.send('Something went wrong')
             console.log(err)
         })
