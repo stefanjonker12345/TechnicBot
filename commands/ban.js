@@ -1,4 +1,4 @@
-module.exports.run = async (bot, message, args, db) => {
+module.exports.run = async (Discord, bot, message, args, db) => {
   if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send('You can\'t use that!')
   if(!message.guild.me.hasPermission("BAN_MEMBERS")) return message.channel.send('I don\'t have the right permissions.')
 
